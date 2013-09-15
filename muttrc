@@ -35,7 +35,7 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set mime_forward = yes
 set mime_forward_rest = yes
-source ~/.mutt/colors.muttrc
+source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 unset resolve
 set reply_to
 set include
