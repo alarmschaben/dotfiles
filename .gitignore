@@ -1,2 +1,6 @@
 *.un~
 __pycache__/*
+mutt/certificates
+mutt/sig
+mutt/cache
+mutt/temp
