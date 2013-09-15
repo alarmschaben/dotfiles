@@ -117,6 +117,9 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Screenshots
+bindsym Print exec scrot '%Y-%m-%d--%H-%M-%S_$wx$h.png' -e 'mv $f ~/Bilder/scrots'
+
 # colors
 client.focused #1c678c #1a2633 #bfb5b5
 
