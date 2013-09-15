@@ -34,7 +34,7 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set mime_forward = yes
-set mime_rest_forward = yes
+set mime_forward_rest = yes
 source ~/.mutt/colors.muttrc
 unset resolve
 set reply_to
