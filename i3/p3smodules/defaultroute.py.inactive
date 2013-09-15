@@ -1,0 +1,31 @@
+import subprocess
+import re
+
+class GetData:
+    def execCMD(self, cmd, arg):
+        result = subprocess.check_output([cmd, arg])
+        return result
+
+    def defaultroute(self):
+        route_data = self.execCMD('/bin/ip', 'ro')
+        return route_data
+
+class Py3status:
+
+    def defaultroute(self, i3status_output_json, i3status_config):
+
+        data = GetData()
+        dataresult = data.defaultroute()
+        resstr= dataresult.decode("utf-8")
+        resarray = resstr.split()
+
+        match = re.search("default via [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+ dev ([a-zA-Z0-9]+)", resstr)
+        if match:
+            routedata = match.group(1)
+
+        response = {'full_text': '', 'name': 'defaultroute'}
+
+        response['full_text'] = "%s" % routedata
+    #    response['full_text'] = data.defaultroute()
+
+        return (0, response)
