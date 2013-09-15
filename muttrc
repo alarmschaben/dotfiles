@@ -1,0 +1,105 @@
+# Paths ----------------------------------------------
+set folder = "imaps://pittiplatsch.metulskie.org:993/INBOX"
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set tmpdir           = ~/.mutt/temp          # where to keep temp files
+set signature        = ~/.mutt/sig           # my signature file
+
+# Account Settings -------------------------------------
+set realname = "Armin F. Gnosa"
+set from = "armin@gnosa.com"
+set imap_user = 'armin'
+set spoolfile = imaps://pittiplatsch.metulskie.org:993/INBOX
+set smtp_url = "smtp://armin@pittiplatsch.metulskie.org:25/"
+set record="=Sent"
+set postponed="=Drafts"
+set imap_check_subscribed=yes
+set sendmail = "/usr/bin/msmtp -a agnosa"
+set sendmail_wait = 0
+
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+#set mbox_type = Maildir  # mailbox type
+set timeout = 3          # idle time before scanning
+#set mail_check = 0       # minimum time between scans
+unset move               # gmail does that
+set delete               # don't ask, just do
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set mime_forward = yes
+set mime_rest_forward = yes
+source ~/.mutt/colors.muttrc
+unset resolve
+set reply_to
+set include
+set reverse_name
+set editor = "vim"
+
+# Sidebar Patch --------------------------------------
+#set sidebar_delim   = '  │'
+#set sidebar_visible = yes
+#set sidebar_width   = 24
+#color sidebar_new color221 color233
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+set edit_hdrs
+
+set abort_nosubject=no
+set attribution = " %n wrote:\n" # I don't like lengthy attributions as well
+alternates .*@gnosa.com .*@agnosa.de .*@alarmschaben.de
+set hdr_format="%4C %Z %{%m/%d} %-15.15F (%4c) %s" # format of the index
+auto_view text/html
+
+# Pager View Options {{{
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+#set display_filter = "clean_mail" # clean up shitty mail
+# }}}
+
+
+#set query_command = '~/opt/goobook-read-only/contactos.py "%s"'
+
+set sort=reverse-date-received
+#set sort_aux=last-date-received
+
+# see beyond for hooks explanations
+#folder-hook . 'set from = "yourname@gmail.com"; \
+#set smtp_url= "smtp://yourname@smtp.gmail.com:587/"'
+
+#folder-hook my 'set from = "i@mywork.com"; \
+#set smtp_url = "smtp://i@mywork.com@smtp.gmail.com:587/";'
+
+#folder-hook foobar 'set from = "yo@example.org";'
+
+# colors stuff outside
+#source ~/.mutt/themes/mytheme
+
+# gpg
+#source ~/.mutt/gpg.rc
+#set crypt_autosign = yes
+
+# sidebar
+#set sidebar_visible=yes
+#set sidebar_width=30
