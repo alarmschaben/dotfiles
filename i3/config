@@ -117,6 +117,9 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# colors
+client.focused #1c678c #1a2633 #bfb5b5
+
 # i3bar
 bar {
         position bottom
