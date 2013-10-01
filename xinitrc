@@ -1,4 +1,5 @@
 xrdb ~/.Xresources
+xrdb -merge ~/dotfiles/solarized
 
 feh --bg-scale /home/armin/Bilder/wallpaper/wallpaper-2886666.jpg
 
