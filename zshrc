@@ -49,3 +49,10 @@ export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl
 
 # aliases
 alias wicd='wicd-curses'
+
+# for some reasons, the keys are a little different on my system...
+bindkey "^[[7~" beginning-of-line
+bindkey "^[[8~" end-of-line
+# why these two don't work is beyond me.
+#bindkey "^[0c" vi-forward-word
+#bindkey "^[0d" vi-backward-word
