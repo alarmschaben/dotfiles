@@ -146,5 +146,10 @@ bindsym $mod+r mode "resize"
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer sset Master '3%+'"
 bindsym XF86AudioLowerVolume exec "amixer sset Master '2%-'"
+
+# network manager related stuff
+for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_toggle
+exec --no-startup-id nm-applet
+
 # keyboard layout chooser
 exec --no-startup-id /usr/bin/xfbxkbd
