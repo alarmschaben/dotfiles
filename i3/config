@@ -152,4 +152,4 @@ for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_to
 exec --no-startup-id nm-applet
 
 # keyboard layout chooser
-exec --no-startup-id /usr/bin/xfbxkbd
+exec --no-startup-id /usr/bin/fbxkb
