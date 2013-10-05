@@ -10,6 +10,4 @@ setxkbmap -option caps:none
 setxkbmap -option grp:shift_caps_toggle us,de
 setxkbmap -option grp_led:caps
 
-exec fbxkb &
 exec i3
-

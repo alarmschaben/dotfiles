@@ -146,3 +146,5 @@ bindsym $mod+r mode "resize"
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer sset Master '3%+'"
 bindsym XF86AudioLowerVolume exec "amixer sset Master '2%-'"
+# keyboard layout chooser
+exec --no-startup-id /usr/bin/xfbxkbd
