@@ -45,7 +45,7 @@ plugins=(git archlinux)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:~/.gem/ruby/2.0.0/bin
 
 # aliases
 alias wicd='wicd-curses'
