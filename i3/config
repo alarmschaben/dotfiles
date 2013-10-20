@@ -147,9 +147,27 @@ bindsym $mod+r mode "resize"
 bindsym XF86AudioRaiseVolume exec "amixer sset Master '3%+'"
 bindsym XF86AudioLowerVolume exec "amixer sset Master '2%-'"
 
-# network manager related stuff
-for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_toggle
+# network manager
 exec --no-startup-id nm-applet
 
 # keyboard layout chooser
 exec --no-startup-id /usr/bin/fbxkb
+
+# For somw floating convenience
+for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_toggle
+for_window [class="Gtkdialog"] floating enable
+for_window [class="Gnome-control-center"] floating enable
+for_window [class="Firefox" window_role="Preferences"] floating enable
+for_window [class="Firefox" instance="Download"] floating enable
+for_window [class="Update-manager"] floating enable
+for_window [class="Gcr-prompter"] floating enable
+for_window [class="Gnome-keyring-prompt-3"] floating enable
+for_window [class="Gnome-system-monitor"] floating enable
+for_window [title="Preferences"] floating enable
+for_window [class="Apport-gtk"] floating enable
+for_window [class="Agave"] floating enable
+for_window [class="Gcalctool"] floating enable
+for_window [class="Komodo edit" instance="Update"] floating enable
+for_window [class="Komodo edit" instance="Komodo_gotofile"] floating enable
+for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="Gstm"] floating enable
