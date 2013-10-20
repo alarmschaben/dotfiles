@@ -1,5 +1,5 @@
 # Paths ----------------------------------------------
-set folder = "imaps://pittiplatsch.metulskie.org:993/INBOX"
+set folder = "imaps://armin@pittiplatsch.metulskie.org:993/INBOX"
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
@@ -19,6 +19,8 @@ set postponed="=Drafts"
 set imap_check_subscribed=yes
 set sendmail = "/usr/bin/msmtp -a agnosa"
 set sendmail_wait = 0
+set imap_pass=`gnome-keyring-query get mutt_pittiplatsch`
+set smtp_pass=`gnome-keyring-query get mutt_pittiplatsch`
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -103,3 +105,4 @@ set sort=reverse-date-received
 # sidebar
 #set sidebar_visible=yes
 #set sidebar_width=30
+
