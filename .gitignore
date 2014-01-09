@@ -1,5 +1,5 @@
 *.un~
-__pycache__/*
+*/__pycache__/*
 mutt/certificates
 mutt/sig
 mutt/cache
