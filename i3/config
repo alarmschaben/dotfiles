@@ -154,7 +154,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/fbxkb
 
 # kalu update notifier
-exec --no-startup-id /usr/bin/kalu
+#exec --no-startup-id /usr/bin/kalu
 
 # For somw floating convenience
 for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_toggle
