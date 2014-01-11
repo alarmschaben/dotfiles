@@ -4,6 +4,17 @@ URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt*.depth:               24
+
+URxvt.buffered:             true
+URxvt.pointerBlank:         true
+URxvt.underlineURLs:        true
+URxvt.saveLines:            2048
+URxvt.fading:               0
+ 
+! Transparency
+URxvt.transparent:          false
+URxvt.scrollBar:            false
 
 *xterm*background: #101010
 *xterm*foreground: #d0d0d0
@@ -24,7 +35,9 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 *xterm*color13: #bb88dd
 *xterm*color14: #4eb4fa
 *xterm*color15: #d0d0d0
-URxvt.font: xft:Menlo for Powerline:size=10
+! URxvt.font: xft:Anonymous Pro for Powerline:size=10
+URxvt.font: xft:Menlo for Powerline:size=9
+
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
