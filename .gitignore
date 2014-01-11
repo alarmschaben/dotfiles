@@ -1,5 +1,6 @@
 *.un~
 */__pycache__/*
+i3/p3smodules/__pycache__/*
 mutt/certificates
 mutt/sig
 mutt/cache
