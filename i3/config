@@ -129,6 +129,7 @@ bar {
         workspace_buttons yes
         font -misc-termsyn.icons-medium-r-normal-*-14-*-*-100-*-*-iso8859-1
         status_command py3status -c ~/.i3status.conf -i ~/.i3/p3smodules
+        tray_output DVI-I-2
         colors {
             background #1A2633
             statusline #bfb5b5
