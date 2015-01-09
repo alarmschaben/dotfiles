@@ -78,7 +78,7 @@ bindsym $mod+6 workspace 6: mail
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8: syslog
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace 10 chat
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -159,6 +159,7 @@ exec --no-startup-id /usr/bin/fbxkb
 
 exec urxvt -name mail -e bash -c "mutt"
 exec urxvt -name syslog -e bash -c "sudo tail -f /var/log/syslog"
+exec urxvt -name chat -e bash -c "profanity"
 
 workspace 1 output DVI-I-2
 workspace 2 output DVI-I-3
@@ -168,10 +169,12 @@ workspace 5 output DVI-I-2
 workspace "6: mail" output DVI-I-3
 workspace 7 output DVI-I-2
 workspace "8: syslog" output DVI-I-3
+workspace "10: chat" output DVI-I-3
 
 
 assign [class="^URxvt$" instance="^mail$"] 6: mail
 assign [class="^URxvt$" instance="^syslog$"] 8: syslog
+assign [class="^URxvt$" instance="^chat$"] 10: chat
 
 # For somw floating convenience
 for_window [class="^Xfce4-notifyd$"] floating enable; border none; focus mode_toggle
