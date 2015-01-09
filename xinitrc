@@ -20,5 +20,8 @@ source /etc/X11/xinit/xinitrc.d/30-dbus
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 compton --backend xrender --vsync opengl --paint-on-overlay -b
-#compton --backend opengl-swc --vsync opengl --paint-on-overlay -b
+
+# start MQTT listener for weather info
+~/.i3/feeder.rb &
+
 exec i3
