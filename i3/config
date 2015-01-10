@@ -147,6 +147,9 @@ bindsym $mod+r mode "resize"
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer sset Master '3%+'"
 bindsym XF86AudioLowerVolume exec "amixer sset Master '2%-'"
+bindsym XF86AudioPlay exec "mpc toggle"
+bindsym XF86AudioNext exec "mpc next"
+bindsym XF86AudioPrev exec "~/dotfiles/mpcPrevSong.sh"
 
 # network manager
 exec --no-startup-id nm-applet
