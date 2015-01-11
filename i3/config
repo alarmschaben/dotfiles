@@ -123,12 +123,33 @@ bindsym Print exec scrot '%Y-%m-%d--%H-%M-%S_$wx$h.png' -e 'mv $f ~/Bilder/scrot
 # colors
 client.focused #1c678c #1a2633 #bfb5b5
 
-# i3bar
+# Status bars for left...
 bar {
+        output DVI-I-2
         position bottom
         workspace_buttons yes
         font -misc-termsyn.icons-medium-r-normal-*-14-*-*-100-*-*-iso8859-1
-        status_command py3status -c ~/.i3status.conf -i ~/.i3/p3smodules
+        status_command python ~/dotfiles/i3pyLeft.py
+        tray_output DVI-I-2
+        colors {
+            background #1A2633
+            statusline #bfb5b5
+            separator  #285577
+
+            focused_workspace  #1C678C #090808 #46a4ff
+            active_workspace   #1a2122 #555555 #eee8d5
+            inactive_workspace #333333 #222222 #888888
+            urgent_workspace   #2f343a #ff669d #eee8d5
+        }
+}
+
+# ...and right screen
+bar {
+        output DVI-I-3
+        position bottom
+        workspace_buttons yes
+        font -misc-termsyn.icons-medium-r-normal-*-14-*-*-100-*-*-iso8859-1
+        status_command python ~/dotfiles/i3pyRight.py
         tray_output DVI-I-2
         colors {
             background #1A2633
