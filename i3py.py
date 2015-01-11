@@ -10,27 +10,14 @@ status = Status(standalone=True)
 status.register("clock",
     format="%a %-d %b %H:%M",)
 
-# determine spin state of hard disks, main system is on SSD
-status.register("shell",
-    command="~/dotfiles/getHDDstate.sh sdb",
-    color="#ffffff",
-    error_color="#00ff00",
-)
-
-status.register("shell",
-    command="~/dotfiles/getHDDstate.sh sda",
-    color="#ffffff",
-    error_color="#00ff00",
-)
-
-# Shows the average load of the last minute and the last 5 minutes
-# (the default value for format is used)
+# Load display
 status.register("load")
 
 # CPU temperature
 status.register("temp",
     format="Ç {temp:.0f}°C",)
 
+# CPU usage
 status.register("cpu_usage",
     format="Ñ {usage:3}%",
 )
@@ -45,7 +32,7 @@ status.register("mem",
 )
 
 # Pulseaudio volume
-status.register("pulseaudio",
+status.register("alsa",
     format="í {volume}%",)
 
 # mpd status

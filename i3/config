@@ -130,7 +130,7 @@ bar {
         position bottom
         workspace_buttons yes
         font -misc-termsyn.icons-medium-r-normal-*-14-*-*-100-*-*-iso8859-1
-        status_command python ~/dotfiles/i3pyLeft.py
+        status_command python ~/dotfiles/i3py.py
         colors {
             background #1A2633
             statusline #bfb5b5
