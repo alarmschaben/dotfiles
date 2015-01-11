@@ -1,5 +1,6 @@
 # Paths ----------------------------------------------
-set folder = "imaps://armin@pittiplatsch.metulskie.org:993/INBOX"
+#set folder = "imaps://armin@pittiplatsch.metulskie.org:993/INBOX"
+set folder = ~/.mail
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
@@ -12,9 +13,11 @@ set signature        = ~/.mutt/sig           # my signature file
 set realname = "Armin F. Gnosa"
 set from = "armin@gnosa.com"
 set imap_user = 'armin'
-set spoolfile = imaps://pittiplatsch.metulskie.org:993/INBOX
+#set spoolfile = imaps://pittiplatsch.metulskie.org:993/INBOX
+set spoolfile = "+armin-gnosa.com/INBOX"
+mailboxes "+armin-gnosa.com/INBOX"
 set smtp_url = "smtp://armin@pittiplatsch.metulskie.org:25/"
-set record="=Sent"
+set record="=INBOX.Sent"
 set postponed="=Drafts"
 set imap_check_subscribed=yes
 set sendmail = "/usr/bin/msmtp -a agnosa"
