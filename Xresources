@@ -21,7 +21,7 @@ URxvt.underlineURLs:        true
 URxvt.saveLines:            2048
 URxvt.fading:               0
 !
-URxvt.font: xft:Menlo for Powerline:size=9
+URxvt.font: xft:Menlo for Powerline:size=10
 
 *xterm*background: #101010
 *xterm*foreground: #d0d0d0
