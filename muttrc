@@ -28,7 +28,8 @@ set smtp_pass=`gnome-keyring-query get mutt_pittiplatsch`
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
 #set mbox_type = Maildir  # mailbox type
-set timeout = 3          # idle time before scanning
+#set timeout = 10          # idle time before scanning
+set imap_idle
 #set mail_check = 0       # minimum time between scans
 unset move               # gmail does that
 set delete               # don't ask, just do
