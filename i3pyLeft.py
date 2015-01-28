@@ -25,7 +25,9 @@ status.register("shell",
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
-status.register("load")
+status.register("load",
+    critical_limit=4
+)
 
 # CPU temperature
 status.register("temp",
