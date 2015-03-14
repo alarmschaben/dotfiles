@@ -40,7 +40,9 @@ status.register("cpu_usage",
 # Disk usage of /
 status.register("disk",
     path="/",
-    format="Ð {avail}G",)
+    format="Ð {avail}G",
+    critical_limit=50,
+)
 
 status.register("mem",
         format="{used_mem:.0f}/{total_mem:.0f} MiB",
