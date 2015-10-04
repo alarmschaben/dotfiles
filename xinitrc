@@ -23,6 +23,8 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 # Composting for smooth scrolling
 compton --backend xrender --vsync opengl --paint-on-overlay -b
 
+exec dunst -conf ~/.dunstrc &
+
 # start MQTT listener for weather info
 ~/.i3/feeder.rb &
 
